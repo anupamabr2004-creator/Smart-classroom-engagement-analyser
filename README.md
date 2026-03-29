@@ -68,21 +68,7 @@ CSV Logging + Live Display
 
 ---
 
-##  Project Structure
-smart-classroom-engagement-analyzer/
-│
-├── src/
-│ ├── main.py # Main execution file
-│ ├── detector.py # Face + attention detection logic
-│ ├── scorer.py # Attention score calculation
-│ ├── logger.py # CSV logging system
-│
-├── attention_log.csv # Generated during execution
-├── requirements.txt # Dependencies
-├── README.md
-└── .gitignore
 
----
 
 ##  Installation & Setup
 
