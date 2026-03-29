@@ -72,85 +72,115 @@ CSV Logging + Live Display
 
 ##  Installation & Setup
 
-### 1. Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone <your-repo-link>
 cd smart-classroom-engagement-analyzer
+```
 
-2️⃣ Create Virtual Environment (Recommended)
+---
+
+###  Create Virtual Environment (Recommended)
+
 ```bash
 python -m venv venv
-Activate:
+```
 
-Windows
+#### Activate Virtual Environment
+
+**Windows**
 ```bash
 venv\Scripts\activate
+```
 
-Mac/Linux
+**Mac/Linux**
 ```bash
 source venv/bin/activate
+```
 
-3️⃣ Install Dependencies
+---
+
+### Install Dependencies
+
 ```bash
 pip install -r requirements.txt
+```
 
-▶️ Running the Project
+---
+
+##  Running the Project
+
 ```bash
 cd src
 python main.py
+```
 
-Press q to exit.
+Press **q** to exit.
 
-Output
+---
+
+##  Output
 
 The system displays:
 
-Student-wise attention status:
-Focused
-Slightly Distracted
-Distracted
-Class-level attention score (average)
-Real-time visual overlay on video feed
-CSV file (attention_log.csv) containing:
-timestamp
-class attention score
+- Student-wise attention status:
+  - Focused  
+  - Slightly Distracted  
+  - Distracted  
 
-Attention Scoring Logic
+- Class-level attention score (average)  
+- Real-time visual overlay on video feed  
+- CSV file (`attention_log.csv`) containing:
+  - timestamp  
+  - class attention score  
 
-Attention is estimated based on head orientation:
+---
 
-Looking forward → High score (Focused)
-Slight deviation → Medium score
-Looking away → Low score (Distracted)
+##  Attention Scoring Logic
 
-Class attention is computed as:
+Attention is estimated based on **head orientation**:
 
-Average of all individual attention scores
+- Looking forward → High score (Focused)  
+- Slight deviation → Medium score (Slightly Distracted)  
+- Looking away → Low score (Distracted)  
 
-Challenges Faced
-Ensuring stable face detection in real-time
-Handling multiple faces in a single frame
-Variations in lighting conditions
-Dependency issues (OpenCV, MediaPipe compatibility)
+**Class Attention = Average of all individual attention scores**
 
-Future Scope
-Eye gaze tracking for precise attention detection
-Mobile phone usage detection (YOLO)
-Interactive dashboard using Streamlit
-Classroom engagement heatmaps
-Integration with smart classroom systems
+---
 
-During development, dependency conflicts were encountered due to multiple pre-installed packages in the environment.
+##  Challenges Faced
 
-To ensure smooth execution on any system, a minimal and stable set of dependencies has been defined in `requirements.txt`.
+- Ensuring stable face detection in real-time  
+- Handling multiple faces in a single frame  
+- Variations in lighting conditions  
+- Dependency issues (OpenCV, MediaPipe compatibility)  
+
+---
+
+##  Future Scope
+
+- Eye gaze tracking for precise attention detection  
+- Mobile phone usage detection using YOLO  
+- Interactive dashboard using Streamlit  
+- Classroom engagement heatmaps  
+- Integration with smart classroom systems  
+
+---
+
+##  Dependency Note
+
+During development, dependency conflicts were encountered due to multiple pre-installed packages.
+
+To ensure smooth execution on any system, a **minimal and stable set of dependencies** has been defined in `requirements.txt`.
 
 If you face issues:
 
-1. Create a fresh virtual environment
+1. Create a fresh virtual environment  
 2. Install dependencies using:
 
 ```bash
 pip install -r requirements.txt
+```
 
-
+ 
